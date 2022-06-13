@@ -8,40 +8,55 @@
     tools:context=".Activities.ElementsList"
     android:paddingTop="16dp">
 
-    <ScrollView
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingHorizontal="16dp"
-        tools:ignore="MissingConstraints">
-        <LinearLayout
+        android:padding="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <EditText
+            android:id="@+id/SearchByName"
+            style="@style/inputs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/SearchByName"
-                style="@style/inputs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            android:hint="Search By Name"
+            android:textColorHint="@color/gray_color"
+            android:textSize="16dp" />
 
-                android:hint="Search By Name"
-                android:textColorHint="@color/gray_color"/>
-
-            <ListView
-                android:id="@+id/listView_elementsList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-    </ScrollView>
+        <ListView
+            android:id="@+id/listView_elementsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
 
     <include
         android:id="@+id/AtomoDelivery_menu"
+        android:layout_marginTop="8dp"
         layout="@layout/menu_inferior"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/teste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:layout_marginBottom="348dp"
+        android:text="Loading..."
+        style="@style/ViewTitle"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/AtomoDelivery_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

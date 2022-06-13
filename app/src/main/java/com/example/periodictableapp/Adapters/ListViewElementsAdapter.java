@@ -56,6 +56,7 @@ public class ListViewElementsAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(layout, null);
 
+            holder.elementContainer_elementItem = row.findViewById(R.id.elementContainer_elementItem);
             holder.txtElementSymbol_elementItem = row.findViewById(R.id.elementSymbol_elementItem);
             holder.txtelementName_elementItem = row.findViewById(R.id.elementName_elementItem);
             holder.txtelementGroupBlock_elementItem = row.findViewById(R.id.elementGroupBlock_elementItem);
@@ -73,6 +74,7 @@ public class ListViewElementsAdapter extends BaseAdapter {
             context.startActivity(intent);
         });
 
+        holder.txtElementSymbol_elementItem.setText(element.getSymbol());
         holder.txtelementName_elementItem.setText(element.getName());
         holder.txtelementGroupBlock_elementItem.setText(element.getGroupBlock());
 

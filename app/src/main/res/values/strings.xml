@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PeriodicTableApp</string>
+    <string name="app_name">Periodicing</string>
     <string name="AtomDelivery">Atom Delivery</string>
     <string name="current_location">Current Location</string>
     <string name="address_line">Address Line</string>
