@@ -1,10 +1,9 @@
 package com.example.periodictableapp;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
-public class Element {
+public class Element implements Serializable {
     private int atomicNumber;
     private String symbol;
     private String name;

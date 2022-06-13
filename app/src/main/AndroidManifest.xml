@@ -17,10 +17,10 @@
         android:theme="@style/Theme.PeriodicTableApp"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.ElementDetails"
+            android:name=".Activities.ElementDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.ElementsList"
+            android:name=".Activities.ElementsListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,10 +28,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.DeliveryAnswer"
+            android:name=".Activities.DeliveryAnswerActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.DeliverySetup"
+            android:name=".Activities.DeliverySetupActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.MainActivity"

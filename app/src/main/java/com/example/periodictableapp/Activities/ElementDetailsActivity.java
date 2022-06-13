@@ -4,11 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.periodictableapp.Element;
 import com.example.periodictableapp.R;
 
-public class ElementDetails extends AppCompatActivity {
+public class ElementDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,8 @@ public class ElementDetails extends AppCompatActivity {
         setContentView(R.layout.activity_element_details);
 
         Intent intent = getIntent();
-        Element projeto = ((Element) intent.getSerializableExtra("Element"));
+        Element element = ((Element) intent.getSerializableExtra("Element"));
+
+        Toast.makeText(ElementDetailsActivity.this, element.getName(), Toast.LENGTH_SHORT).show();
     }
 }

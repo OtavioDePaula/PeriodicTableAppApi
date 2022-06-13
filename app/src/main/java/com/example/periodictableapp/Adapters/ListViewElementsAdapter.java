@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.periodictableapp.Activities.ElementDetails;
+import com.example.periodictableapp.Activities.ElementDetailsActivity;
 import com.example.periodictableapp.Element;
 import com.example.periodictableapp.R;
 
@@ -69,7 +69,7 @@ public class ListViewElementsAdapter extends BaseAdapter {
         Element element = elementList.get(position);
 
         holder.elementContainer_elementItem.setOnClickListener(v -> {
-            Intent intent = new Intent(context, ElementDetails.class);
+            Intent intent = new Intent(context, ElementDetailsActivity.class);
             intent.putExtra("Element", (Parcelable) element);
             context.startActivity(intent);
         });

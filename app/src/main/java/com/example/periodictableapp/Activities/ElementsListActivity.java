@@ -27,11 +27,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class ElementsList extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
+public class ElementsListActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
 
     ListView listViewElements;
     List<Element> elementList;
-    String quey, queryString;
+    String queryString;
     TextView teste;
 
     @Override
@@ -42,6 +42,8 @@ public class ElementsList extends AppCompatActivity implements LoaderManager.Loa
         teste = findViewById(R.id.teste);
         elementList = new ArrayList<Element>();
         listViewElements = (ListView) findViewById(R.id.listView_elementsList);
+
+
 
         // Verifica o status da conexão de rede
         ConnectivityManager connMgr = (ConnectivityManager)

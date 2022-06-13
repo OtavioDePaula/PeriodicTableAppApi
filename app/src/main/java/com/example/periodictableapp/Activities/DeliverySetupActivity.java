@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.periodictableapp.R;
 
-public class DeliverySetup extends AppCompatActivity {
+public class DeliverySetupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.DeliveryAnswer"
+    tools:context=".Activities.DeliveryAnswerActivity"
     android:background="@color/bg"
     android:paddingTop="16dp">
 
