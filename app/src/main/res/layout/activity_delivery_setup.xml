@@ -40,29 +40,30 @@
                 android:layout_height="40dp"
                 android:layout_weight="10" />
 
-            <!-- BOTÃO CURRENT LOCATION -->
+            <!-- BUTTON CURRENT LOCATION -->
             <LinearLayout
+                android:id="@+id/btnCurrentLocation"
+                style="@style/buttonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/gray_color"
                 android:orientation="horizontal"
-                android:padding="6dp"
-                style="@style/buttonStyle"
-                android:background="@color/gray_color">
+                android:padding="6dp">
 
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_atomo_menu"
-                    android:background="@null"/>
+                    android:background="@null"
+                    android:src="@drawable/ic_atomo_menu" />
 
                 <TextView
+                    style="@style/ViewTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="@string/current_location"
-                    style="@style/ViewTitle"
-                    android:textSize="16dp"
-                    android:layout_gravity="center"/>
+                    android:textSize="16dp" />
 
             </LinearLayout>
 
@@ -86,7 +87,7 @@
                     android:textSize="16dp"/>
 
                 <EditText
-                    android:id="@+id/input_addressLine"
+                    android:id="@+id/DeliverySetup_inputAddressLine"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/inputs"/>
@@ -111,7 +112,7 @@
                     android:textSize="16dp"/>
 
                 <EditText
-                    android:id="@+id/input_number"
+                    android:id="@+id/DeliverySetup_inputNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/inputs"/>
@@ -136,7 +137,7 @@
                     android:textSize="16dp"/>
 
                 <EditText
-                    android:id="@+id/input_postalCode"
+                    android:id="@+id/DeliverySetup_inputPostalCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/inputs"/>
@@ -161,7 +162,7 @@
                     android:textSize="16dp"/>
 
                 <EditText
-                    android:id="@+id/input_districts"
+                    android:id="@+id/DeliverySetup_inputDistricts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/inputs"/>
@@ -186,7 +187,7 @@
                     android:textSize="16dp"/>
 
                 <EditText
-                    android:id="@+id/input_city"
+                    android:id="@+id/DeliverySetup_inputCity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/inputs"/>
@@ -211,7 +212,7 @@
                     android:textSize="16dp"/>
 
                 <EditText
-                    android:id="@+id/input_state_province"
+                    android:id="@+id/DeliverySetup_inputStateProvince"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/inputs"/>
