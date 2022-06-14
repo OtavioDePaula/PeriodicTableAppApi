@@ -29,7 +29,28 @@ import org.json.JSONObject;
 
 public class ElementDetailsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>{
     String queryString;
-    TextView txtAtomicMass;
+    TextView txtAtomicNumber,
+            txtSymbol,
+            txtName,
+            txtAtomicMass,
+            txtEletronicConfiguration,
+            txtElectronegativity,
+            txtAtomicRadius,
+            txtIonRadius,
+            txtVanderwaalsradius,
+            txtIonizationEnergy,
+            txtElectroaffinity,
+            txtOxidationState,
+            txtStandardState,
+            txtBodingType,
+            txtMeltingPoint,
+            txtBoilingType,
+            txtDensity,
+            txtGroupBlock,
+            txtYearDiscovered,
+            txtBlock,
+            txtPeriod,
+            txtGroup;
     Element element;
 
     @Override
@@ -40,8 +61,31 @@ public class ElementDetailsActivity extends AppCompatActivity implements LoaderM
         Intent intent = getIntent();
         int atomicNumber = intent.getIntExtra("atomicNumber", 0);
         element = new Element();
-        txtAtomicMass = findViewById(R.id.txtElementResult_AtomicMass);
 
+        txtAtomicNumber = (TextView) findViewById(R.id.txtElementResult_AtomicNumber);
+        txtSymbol = (TextView) findViewById(R.id.txtElementResult_Symbol);
+        txtName = (TextView) findViewById(R.id.txtElementResult_Name);
+        txtAtomicMass = (TextView) findViewById(R.id.txtElementResult_AtomicMass);
+        txtEletronicConfiguration = (TextView) findViewById(R.id.txtElementResult_EletronicConfiguration);
+        txtElectronegativity = (TextView) findViewById(R.id.txtElementResult_ElectronicNegativity);
+        txtAtomicRadius = (TextView) findViewById(R.id.txtElementResult_AtomicRadius);
+        txtIonRadius = (TextView) findViewById(R.id.txtElementResult_IonRadius);
+        txtVanderwaalsradius = (TextView) findViewById(R.id.txtElementResult_vanderwaalsradius);
+        txtIonizationEnergy = (TextView) findViewById(R.id.txtElementResult_ionizationenergy);
+        txtElectroaffinity = (TextView) findViewById(R.id.txtElementResult_electroaffinity);
+        txtGroupBlock = (TextView) findViewById(R.id.txtElementResult_groupblock);
+        txtOxidationState = (TextView) findViewById(R.id.txtElementResult_oxidationstate);
+        txtStandardState = (TextView) findViewById(R.id.txtElementResult_standardstate);
+        txtBodingType = (TextView) findViewById(R.id.txtElementResult_bodingtype);
+        txtMeltingPoint = (TextView) findViewById(R.id.txtElementResult_meltingpoint);
+        txtBoilingType = (TextView) findViewById(R.id.txtElementResult_boilingtype);
+        txtDensity = (TextView) findViewById(R.id.txtElementResult_density);
+        txtGroupBlock = (TextView) findViewById(R.id.txtElementResult_groupblock);
+        txtYearDiscovered = (TextView) findViewById(R.id.txtElementResult_yeardiscovered);
+        txtBlock = (TextView) findViewById(R.id.txtElementResult_block);
+        txtPeriod = (TextView) findViewById(R.id.txtElementResult_period);
+        txtGroup = (TextView) findViewById(R.id.txtElementResult_group);
+        
 
         // queryString = "element/atomicNumber/" + String.valueOf(element.getAtomicNumber());
         queryString = "element/atomicNumber/" + String.valueOf(atomicNumber);
@@ -79,32 +123,32 @@ public class ElementDetailsActivity extends AppCompatActivity implements LoaderM
             {
                 JSONObject object = jsonArray.getJSONObject(i);
 
-                txtAtomicMass.setText(object.getString("atomicMass"));
-
-                element.setAtomicNumber(object.getInt("atomicNumber"));
-                element.setSymbol(object.getString("symbol"));
-                element.setName(object.getString("name"));
-                element.setAtomicMass(object.getString("atomicMass"));
-                element.setElectronicConfiguration(object.getString("eletronicConfiguration"));
-                element.setElectronegativity(object.getDouble("electronegativity"));
-                element.setAtomicRadius(object.getInt("atomicRadius"));
-                element.setIonRadius(object.getString("ionRadius"));
-                element.setVanDerWaalsRadius(object.getInt("vanDerWaalsRadius"));
-                element.setIonizationEnergy(object.getInt("ionizationEnergy"));
-                element.setElectronAffinity(object.getInt("electronAffinity"));
-                element.setGroupBlock(object.getString("groupBlock"));
-                element.setOxidationStates(object.getString("oxidationStates"));
-                element.setStandardState(object.getString("standardState"));
-                element.setBondingType(object.getString("bondingType"));
-                element.setMeltingPoint(object.getInt("meltingPoint"));
-                element.setBoilingPoint(object.getInt("boilingPoint"));
-                element.setDensity(object.getInt("density"));
-                element.setGroupBlock(object.getString("groupBlock"));
-                element.setYearDiscovered(object.getString("yearDiscovered"));
-                element.setBlock(object.getString("block"));
-                element.setCpkHexColor(object.getString("cpkHexColor"));
-                element.setPeriod(object.getInt("period"));
-                element.setGroup(object.getInt("group"));
+                try {
+                    txtAtomicNumber.setText(String.valueOf(object.getInt("atomicNumber")));
+                    txtSymbol.setText(object.getString("symbol"));
+                    txtName.setText(object.getString("name"));
+                    txtAtomicMass.setText(object.getString("atomicMass"));
+                    txtEletronicConfiguration.setText(object.getString("electronicConfiguration"));
+                    txtElectronegativity.setText(String.valueOf(object.getDouble("electronegativity")));
+                    txtAtomicRadius.setText(String.valueOf(object.getInt("atomicRadius")));
+                    txtIonRadius.setText(object.getString("ionRadius"));
+                    txtVanderwaalsradius.setText(object.getString("vanDerWaalsRadius"));
+                    txtIonizationEnergy.setText(String.valueOf(object.getInt("ionizationEnergy")));
+                    txtElectroaffinity.setText(String.valueOf(object.getInt("electronAffinity")));
+                    txtOxidationState.setText(object.getString("oxidationStates"));
+                    txtStandardState.setText(object.getString("standardState"));
+                    txtBodingType.setText(object.getString("bondingType"));
+                    txtMeltingPoint.setText(String.valueOf(object.getInt("meltingPoint")));
+                    txtBoilingType.setText(String.valueOf(object.getInt("boilingPoint")));
+                    txtDensity.setText(String.valueOf(object.getDouble("density")));
+                    txtGroupBlock.setText(object.getString("groupBlock"));
+                    txtYearDiscovered.setText(object.getString("yearDiscovered"));
+                    txtBlock.setText(object.getString("block"));
+                    txtPeriod.setText(String.valueOf(object.getInt("period")));
+                    txtGroup.setText(String.valueOf(object.getInt("group")));
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
 
             }
 
