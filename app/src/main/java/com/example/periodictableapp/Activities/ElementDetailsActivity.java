@@ -14,6 +14,7 @@ import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -161,5 +162,26 @@ public class ElementDetailsActivity extends AppCompatActivity implements LoaderM
     @Override
     public void onLoaderReset(@NonNull Loader<String> loader) {
 
+    }
+
+    // MENU
+    public void openHome(View v) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openList(View v) {
+        Intent intent = new Intent(getApplicationContext(), ElementsListActivity.class);
+        startActivity(intent);
+    }
+
+    public void openFavorites(View v) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openDelivery(View v) {
+        Intent intent = new Intent(getApplicationContext(), DeliverySetupActivity.class);
+        startActivity(intent);
     }
 }

@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             app:srcCompat="@drawable/ic_tabela_periodica_menu"
-            android:onClick="abrirHome"
+            android:onClick="openHome"
             tools:ignore="MissingConstraints" />
 
         <Space
@@ -36,12 +36,12 @@
             android:layout_width="wrap_content"/>
 
         <ImageButton
-            android:id="@+id/itemMenu_projeto"
+            android:id="@+id/itemMenu_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             app:srcCompat="@drawable/ic_listas_menu"
-            android:onClick="abrirListas"
+            android:onClick="openList"
             tools:ignore="MissingConstraints" />
 
         <Space
@@ -50,12 +50,12 @@
             android:layout_width="wrap_content"/>
 
         <ImageButton
-            android:id="@+id/itemMenu_funcionario"
+            android:id="@+id/itemMenu_favorited"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             app:srcCompat="@drawable/ic_favoritos_menu"
-            android:onClick="abrirFavoritos"
+            android:onClick="openFavorites"
             tools:ignore="MissingConstraints" />
 
         <Space
@@ -64,12 +64,12 @@
             android:layout_width="wrap_content"/>
 
         <ImageButton
-            android:id="@+id/itemMenu_cliente"
+            android:id="@+id/itemMenu_atomdelivery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             app:srcCompat="@drawable/ic_atomo_menu"
-            android:onClick="abrirDelivery"
+            android:onClick="openDelivery"
             tools:ignore="MissingConstraints" />
 
         <Space

@@ -1,6 +1,7 @@
 package com.example.periodictableapp.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -25,7 +26,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class ElementsListActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
 
@@ -94,5 +94,26 @@ public class ElementsListActivity extends AppCompatActivity implements LoaderMan
     @Override
     public void onLoaderReset(@NonNull Loader<String> loader) {
 
+    }
+
+    // MENU
+    public void openHome(View v) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openList(View v) {
+        Intent intent = new Intent(getApplicationContext(), ElementsListActivity.class);
+        startActivity(intent);
+    }
+
+    public void openFavorites(View v) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openDelivery(View v) {
+        Intent intent = new Intent(getApplicationContext(), DeliverySetupActivity.class);
+        startActivity(intent);
     }
 }
