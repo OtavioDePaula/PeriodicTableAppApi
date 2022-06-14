@@ -43,30 +43,25 @@ public class ElementsListActivity extends AppCompatActivity implements LoaderMan
         elementList = new ArrayList<Element>();
         listViewElements = (ListView) findViewById(R.id.listView_elementsList);
 
+        queryString = "elements";
 
-
-        // Verifica o status da conexão de rede
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = null;
         if (connMgr != null) {
             networkInfo = connMgr.getActiveNetworkInfo();
         }
-        /* Se a rede estiver disponivel e o campo de busca não estiver vazio
-         iniciar o Loader CarregaLivros */
         if (networkInfo != null && networkInfo.isConnected())
         {
             Bundle queryBundle = new Bundle();
             queryBundle.putString("queryString", queryString);
             getSupportLoaderManager().restartLoader(0, queryBundle, this);
         }
-
     }
 
     @NonNull
     @Override
     public Loader<String> onCreateLoader(int id, @Nullable Bundle args) {
-        String queryString = "";
         if (args != null) {
             queryString = args.getString("queryString");
         }
@@ -82,6 +77,7 @@ public class ElementsListActivity extends AppCompatActivity implements LoaderMan
             {
                 JSONObject object = jsonArray.getJSONObject(i);
                 Element element = new Element();
+                element.setAtomicNumber(object.getInt("atomicNumber"));
                 element.setSymbol(object.getString("symbol"));
                 element.setGroupBlock(object.getString("groupBlock"));
                 element.setName(object.getString("name"));

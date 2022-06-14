@@ -1,7 +1,6 @@
 package com.example.periodictableapp;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Element implements Serializable {
     private int atomicNumber;
@@ -12,17 +11,17 @@ public class Element implements Serializable {
     private double electronegativity;
     private int atomicRadius;
     private String ionRadius;
-    private String vanDerWaalsRadius;
+    private int vanDerWaalsRadius;
     private int ionizationEnergy;
     private int electronAffinity;
-    private int oxidationStates;
+    private String oxidationStates;
     private String standardState;
     private String bondingType;
     private int meltingPoint;
     private int boilingPoint;
     private double density;
     private String groupBlock;
-    private Date yearDiscovered;
+    private String yearDiscovered;
     private String block;
     private String cpkHexColor;
     private int period;
@@ -153,11 +152,11 @@ public class Element implements Serializable {
         this.ionRadius = ionRadius;
     }
 
-    public String getVanDerWaalsRadius() {
+    public int getVanDerWaalsRadius() {
         return vanDerWaalsRadius;
     }
 
-    public void setVanDerWaalsRadius(String vanDerWaalsRadius) {
+    public void setVanDerWaalsRadius(int vanDerWaalsRadius) {
         this.vanDerWaalsRadius = vanDerWaalsRadius;
     }
 
@@ -177,11 +176,11 @@ public class Element implements Serializable {
         this.electronAffinity = electronAffinity;
     }
 
-    public int getOxidationStates() {
+    public String getOxidationStates() {
         return oxidationStates;
     }
 
-    public void setOxidationStates(int oxidationStates) {
+    public void setOxidationStates(String oxidationStates) {
         this.oxidationStates = oxidationStates;
     }
 
@@ -233,11 +232,11 @@ public class Element implements Serializable {
         this.groupBlock = groupBlock;
     }
 
-    public Date getYearDiscovered() {
+    public String getYearDiscovered() {
         return yearDiscovered;
     }
 
-    public void setYearDiscovered(Date yearDiscovered) {
+    public void setYearDiscovered(String yearDiscovered) {
         this.yearDiscovered = yearDiscovered;
     }
 

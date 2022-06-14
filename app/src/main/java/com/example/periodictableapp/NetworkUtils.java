@@ -12,18 +12,22 @@ import java.net.URL;
 
 public class NetworkUtils {
     private static final String LOG_TAG = NetworkUtils.class.getSimpleName();
-    private static final String ELEMENTS_URL = "https://periodic-table-elements-info.herokuapp.com/elements";
-    private static final String ELEMENT_QUANTIDADE = "";
+    private static final String ELEMENTS_URL = "https://periodic-table-elements-info.herokuapp.com/";
 
 
     static String searchElements(String queryString) {
-
+        String url;
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
         String elementJSONString = null;
 
+        url = ELEMENTS_URL;
+        if(queryString != null)
+            url = ELEMENTS_URL + queryString;
+
+
         try {
-            Uri builtURI = Uri.parse(ELEMENTS_URL).buildUpon()
+            Uri builtURI = Uri.parse(url).buildUpon()
                     .build();
 
             URL requestURL = new URL(builtURI.toString());

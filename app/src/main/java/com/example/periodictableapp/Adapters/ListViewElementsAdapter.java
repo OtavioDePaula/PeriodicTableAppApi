@@ -70,7 +70,8 @@ public class ListViewElementsAdapter extends BaseAdapter {
 
         holder.elementContainer_elementItem.setOnClickListener(v -> {
             Intent intent = new Intent(context, ElementDetailsActivity.class);
-            intent.putExtra("Element", (Parcelable) element);
+            //intent.putExtra("Element", (Parcelable) element);
+            intent.putExtra("atomicNumber", element.getAtomicNumber());
             context.startActivity(intent);
         });
 

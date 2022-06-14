@@ -139,6 +139,7 @@
                         android:textSize="16dp" />
 
                     <TextView
+                        android:id="@+id/txtElementResult_Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/ViewTitle"
@@ -165,6 +166,7 @@
                         android:textSize="16dp" />
 
                     <TextView
+                        android:id="@+id/txtElementResult_AtomicMass"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/ViewTitle"
