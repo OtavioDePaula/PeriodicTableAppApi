@@ -18,7 +18,10 @@
             android:backgroundTint="@color/bg"
             android:text="Abrir Tabela"
             android:textColor="@color/white"
-            app:icon="@drawable/ic_atomo_menu" />
+            app:icon="@drawable/ic_tabela_periodica_menu"
+            app:iconPadding="1dp"
+            app:iconTint="#FFFFFF"
+            app:iconTintMode="src_in" />
     </LinearLayout>
 
 </FrameLayout>
