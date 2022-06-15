@@ -24,14 +24,14 @@ Não é necessário nenhum tipo de cadastro no aplicativo, apenas acesso a inter
 - [x] Menu
 - [ ] Sensor
 - [ ] Database
-
+- [x] Widget
 ### Telas 
 - [ ]          Splash
 - [ ]            Main - Tabela Periódica
 - [x]            List - Lista dos elementos
 - [x]         Details - Detalhes dos elementos
-- [ ]  Delivery Setup - Formulário
-- [x] Delivery Answer - Resposta do form 
+- [x]  Delivery Setup - Formulário
+- [ ] Delivery Answer - Resposta do form 
 ## Desenvolvimento 
 Desenvolvedores: Luiz Felipe & Otávio de Paula
 
