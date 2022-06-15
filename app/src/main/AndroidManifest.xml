@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -23,20 +24,34 @@
         <activity
             android:name=".Activities.ElementsListActivity"
             android:exported="true">
+        </activity>
+        <activity
+            android:name=".Activities.DeliveryAnswerActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.DeliveryAnswerActivity"
-            android:exported="false" />
-        <activity
             android:name=".Activities.DeliverySetupActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.MainActivity"
             android:exported="false" />
+
+        <receiver android:name=".Widgets.OpenWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=
+                    "android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info"/>
+        </receiver>
+
     </application>
 
 </manifest>

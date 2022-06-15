@@ -10,6 +10,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
@@ -41,7 +42,7 @@ public class DeliverySetupActivity extends AppCompatActivity {
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
-        LinearLayout btnCurrentLocation = (LinearLayout) findViewById(R.id.btnCurrentLocation);
+        Button btnCurrentLocation = (Button) findViewById(R.id.btnCurrentLocation);
         txtBairro = (EditText) findViewById(R.id.DeliverySetup_inputDistricts);
         txtCidade = (EditText) findViewById(R.id.DeliverySetup_inputCity);
         txtCEP = (EditText) findViewById(R.id.DeliverySetup_inputPostalCode);

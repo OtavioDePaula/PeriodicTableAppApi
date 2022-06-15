@@ -43,6 +43,7 @@
 
             <!-- BUTTON CURRENT LOCATION -->
             <Button
+                android:id="@+id/btnCurrentLocation"
                 style="@style/buttonStyle"
                 android:layout_width="220dp"
                 android:layout_height="50dp"
