@@ -1,5 +1,5 @@
 # Periodic Table Api
-### Aplicativo utlizando dados da api.
+### Aplicativo utlizando dados da api externa e interna.
 
 ## Descrição 
 Aplicativo para melhor visualização dos dados presentes em uma tabela periódica, sendo mais interativo e de fácil compreendimento das suas funcionalidades.
@@ -15,15 +15,15 @@ Não é necessário nenhum tipo de cadastro no aplicativo, apenas acesso a inter
 ## To Do
 - [x] Conexão com API
 - [x] Listar todos os dados
-- [ ] Estilização mais fiel com protótipo
+- [ ] Estilização mais fiel ao protótipo
 - [x] Detalhes de um dos elementos
 - [x] Localização Atual
 - [ ] Cor nos elementos
 - [x] Busca por atomic number
 - [ ] Busca por nome
 - [x] Menu
-- [ ] Sensor
-- [ ] Database
+- [x] Sensor
+- [x] Database
 - [x] Widget
 ### Telas 
 - [ ]          Splash
@@ -33,7 +33,7 @@ Não é necessário nenhum tipo de cadastro no aplicativo, apenas acesso a inter
 - [x]  Delivery Setup - Formulário
 - [ ] Delivery Answer - Resposta do form 
 ## Desenvolvimento 
-Desenvolvedores: Luiz Felipe & Otávio de Paula
+Desenvolvedores: Luiz Felipe - Ativos: Pedro Brisque & Otávio de Paula
 
 Sistema Operacional: Android
 

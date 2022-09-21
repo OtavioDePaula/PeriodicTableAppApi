@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     public void openFavorites(View v) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), FavoritedActivity.class);
         startActivity(intent);
     }
 

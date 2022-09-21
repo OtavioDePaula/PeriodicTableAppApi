@@ -133,7 +133,6 @@ public class ElementDetailsActivity extends AppCompatActivity implements LoaderM
                     txtElectronegativity.setText(String.valueOf(object.getDouble("electronegativity")));
                     txtAtomicRadius.setText(String.valueOf(object.getInt("atomicRadius")));
                     txtIonRadius.setText(object.getString("ionRadius"));
-                    txtVanderwaalsradius.setText(object.getString("vanDerWaalsRadius"));
                     txtIonizationEnergy.setText(String.valueOf(object.getInt("ionizationEnergy")));
                     txtElectroaffinity.setText(String.valueOf(object.getInt("electronAffinity")));
                     txtOxidationState.setText(object.getString("oxidationStates"));
@@ -176,7 +175,7 @@ public class ElementDetailsActivity extends AppCompatActivity implements LoaderM
     }
 
     public void openFavorites(View v) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), FavoritedActivity.class);
         startActivity(intent);
     }
 

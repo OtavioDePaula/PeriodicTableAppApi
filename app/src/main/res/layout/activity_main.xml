@@ -4,6 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:backgroundTint="@color/bg"
     tools:context=".Activities.MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="sans"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="348dp"
+        tools:text="The service is off, try again later" />
 </androidx.constraintlayout.widget.ConstraintLayout>

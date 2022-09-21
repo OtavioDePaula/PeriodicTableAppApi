@@ -1,24 +1,27 @@
 package com.example.periodictableapp.Activities;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ListView;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+
 import com.example.periodictableapp.Adapters.ListViewElementsAdapter;
 import com.example.periodictableapp.Element;
+import com.example.periodictableapp.Groupblock;
 import com.example.periodictableapp.LoadElements;
 import com.example.periodictableapp.R;
+import com.example.periodictableapp.StandardState;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,7 +30,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ElementsListActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
+public class FavoritedActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
 
     ListView listViewElements;
     List<Element> elementList;
@@ -37,13 +40,12 @@ public class ElementsListActivity extends AppCompatActivity implements LoaderMan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_elements_list);
+        setContentView(R.layout.activity_favorited);
 
         loading = findViewById(R.id.teste);
         elementList = new ArrayList<Element>();
-        listViewElements = (ListView) findViewById(R.id.listView_elementsList);
 
-        queryString = "elements";
+        queryString = "element/favorited/";
 
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -72,14 +74,32 @@ public class ElementsListActivity extends AppCompatActivity implements LoaderMan
     public void onLoadFinished(@NonNull Loader<String> loader, String data) {
         loading.setVisibility(View.INVISIBLE);
         try {
-            JSONArray jsonArray = new JSONArray(data);
-            for(int i = 0; i < jsonArray.length(); i++)
+            JSONArray jsonArrayElement = new JSONArray(data);
+            JSONObject jsonObject = new JSONObject(data);
+            JSONArray jsonArrayGroupBlock = jsonObject.getJSONArray("groupBlock");
+            JSONArray jsonArrayStandardState = jsonObject.getJSONArray("standardState");
+
+
+
+            for(int i = 0; i < jsonArrayStandardState.length(); i++)
             {
-                JSONObject object = jsonArray.getJSONObject(i);
+
+                JSONObject object = jsonArrayElement.getJSONObject(i);
+
+                Groupblock groupBlock = new Groupblock();
+                groupBlock.setgroupblockID(object.getInt("groupblockid"));
+                groupBlock.setgroupblock(object.getString("groupblock"));
+
+                StandardState standardState = new StandardState();
+                standardState.setstandardStateID(object.getInt("standardstateid"));
+                standardState.setstandardState(object.getString("standardstate"));
+
                 Element element = new Element();
                 element.setatomicNumber(object.getInt("atomicNumber"));
                 element.setsymbol(object.getString("symbol"));
                 element.setname(object.getString("name"));
+                element.set_groupblock(groupBlock);
+                element.set_standardState(standardState);
                 elementList.add(element);
             }
 
@@ -95,24 +115,9 @@ public class ElementsListActivity extends AppCompatActivity implements LoaderMan
 
     }
 
-    // MENU
-    public void openHome(View v) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void openList(View v) {
-        Intent intent = new Intent(getApplicationContext(), ElementsListActivity.class);
-        startActivity(intent);
-    }
-
-    public void openFavorites(View v) {
-        Intent intent = new Intent(getApplicationContext(), FavoritedActivity.class);
-        startActivity(intent);
-    }
-
     public void openDelivery(View v) {
         Intent intent = new Intent(getApplicationContext(), DeliverySetupActivity.class);
         startActivity(intent);
     }
+
 }

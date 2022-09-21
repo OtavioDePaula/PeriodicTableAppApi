@@ -101,7 +101,7 @@ public class DeliverySetupActivity extends AppCompatActivity {
     }
 
     public void openFavorites(View v) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), FavoritedActivity.class);
         startActivity(intent);
     }
 

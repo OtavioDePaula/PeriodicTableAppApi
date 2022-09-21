@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
-    tools:context=".Activities.ElementsListActivity"
+    tools:context=".Activities.FavoritedActivity"
     android:paddingTop="16dp">
 
 
@@ -17,20 +17,17 @@
         android:padding="16dp"
         tools:layout_editor_absoluteY="16dp">
 
-        <EditText
-            android:id="@+id/SearchByName"
-            style="@style/inputs"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:hint="Search By Name"
-            android:textColorHint="@color/gray_color"
-            android:textSize="16dp" />
+            android:text="@string/your_saved"
+            android:textColor="@color/white"
+            android:textSize="36dp" />
 
         <ListView
             android:id="@+id/listView_elementsList"
             android:layout_width="match_parent"
-            android:layout_height="566dp"
+            android:layout_height="571dp"
             android:layout_marginBottom="8dp" />
     </LinearLayout>
 

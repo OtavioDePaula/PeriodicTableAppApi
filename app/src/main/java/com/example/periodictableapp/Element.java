@@ -2,281 +2,125 @@ package com.example.periodictableapp;
 
 import java.io.Serializable;
 
-public class Element implements Serializable {
-    private int atomicNumber;
-    private String symbol;
-    private String name;
-    private String atomicMass;
-    private String electronicConfiguration;
-    private double electronegativity;
-    private int atomicRadius;
-    private String ionRadius;
-    private int vanDerWaalsRadius;
-    private int ionizationEnergy;
-    private int electronAffinity;
-    private String oxidationStates;
-    private String standardState;
-    private String bondingType;
-    private int meltingPoint;
-    private int boilingPoint;
-    private double density;
-    private String groupBlock;
-    private String yearDiscovered;
-    private String block;
-    private String cpkHexColor;
-    private int period;
-    private int group;
-    private boolean favorited;
+public class Element implements Serializable
+{
+    private int _atomicNumber;
+    private String _symbol;
+    private String _name;
+    private String _atomicMass;
+    private short _yearDiscovered;
+    private String _cpkHexColor;
+    private int _period;
+    private int _groupfamily;
+    private boolean _favorited;
+    private StandardState _standardState;
+    private Groupblock _groupblock;
 
-    // CONSTRUCTORS
-    public Element() {
+    public int getatomicNumber()
+    {
+        return this._atomicNumber;
+    }
+    public void setatomicNumber(int value)
+    {
+        this._atomicNumber = value;
     }
 
-//    public List<Element> getAllElements()
-//    {
-//        ArrayList<Element> elementList = new ArrayList<>();
-//        return elementList;
-//    }
-//
-//
-//    public List<Element> getElementsByBlock(String block)
-//    {
-//
-//    }
-//
-//    public List<Element> getElementsByState(String state)
-//    {
-//
-//    }
-//
-//    public Element getElementByAtomicName(String name)
-//    {
-//        Element element = new Element();
-//        return element;
-//    }
-//
-//    public Element getElementByAtomic(int atomicNumber)
-//    {
-//        Element element = new Element();
-//        return element;
-//    }
-//
-//    public Element getElementBySymbol(String symbol)
-//    {
-//        Element element = new Element();
-//        return element;
-//    }
-//
-//    public List<Element> getElementsByBodingType(String bondingType)
-//    {
-//
-//    }
-//
-//    public List<Element> getElementsByType(String type)
-//    {
-//
-//    }
-//
-//    public List<Element> getElementsByGroup(String group)
-//    {
-//
-//    }
-//
-//    public List<Element> getElementsByPeriod(String period)
-//    {
-//
-//    }
 
-    // GETTERS AND SETTERS
-    public int getAtomicNumber() {
-        return atomicNumber;
+    public String getsymbol()
+    {
+        return this._symbol;
+    }
+    public void setsymbol(String value)
+    {
+        this._symbol = value;
     }
 
-    public void setAtomicNumber(int atomicNumber) {
-        this.atomicNumber = atomicNumber;
+
+    public String getname()
+    {
+        return this._name;
+    }
+    public void setname(String value)
+    {
+        this._name = value;
     }
 
-    public String getSymbol() {
-        return symbol;
+
+    public String getatomicMass()
+    {
+        return this._atomicMass;
+    }
+    public void setatomicMass(String value)
+    {
+        this._atomicMass = value;
     }
 
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
+
+    public short getyearDiscovered()
+    {
+        return this._yearDiscovered;
+    }
+    public void setyearDiscovered(short value)
+    {
+        this._yearDiscovered = value;
     }
 
-    public String getName() {
-        return name;
+
+    public String getcpkHexColor()
+    {
+        return this._cpkHexColor;
+    }
+    public void setcpkHexColor(String value)
+    {
+        this._cpkHexColor = value;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public int getperiod()
+    {
+        return this._period;
+    }
+    public void setperiod(int value)
+    {
+        this._period = value;
     }
 
-    public String getAtomicMass() {
-        return atomicMass;
+
+    public int getgroupfamily()
+    {
+        return this._groupfamily;
+    }
+    public void setgroupfamily(int value)
+    {
+        this._groupfamily = value;
     }
 
-    public void setAtomicMass(String atomicMass) {
-        this.atomicMass = atomicMass;
+
+    public boolean getfavorited()
+    {
+        return this._favorited;
+    }
+    public void setfavorited(boolean value)
+    {
+        this._favorited = value;
     }
 
-    public String getElectronicConfiguration() {
-        return electronicConfiguration;
+
+    public StandardState get_standardState() {
+        return _standardState;
     }
 
-    public void setElectronicConfiguration(String electronicConfiguration) {
-        this.electronicConfiguration = electronicConfiguration;
+    public void set_standardState(StandardState _standardState) {
+        this._standardState = _standardState;
     }
 
-    public double getElectronegativity() {
-        return electronegativity;
+    public Groupblock get_groupblock() {
+        return _groupblock;
     }
 
-    public void setElectronegativity(double electronegativity) {
-        this.electronegativity = electronegativity;
+    public void set_groupblock(Groupblock _groupblock) {
+        this._groupblock = _groupblock;
     }
 
-    public int getAtomicRadius() {
-        return atomicRadius;
-    }
 
-    public void setAtomicRadius(int atomicRadius) {
-        this.atomicRadius = atomicRadius;
-    }
-
-    public String getIonRadius() {
-        return ionRadius;
-    }
-
-    public void setIonRadius(String ionRadius) {
-        this.ionRadius = ionRadius;
-    }
-
-    public int getVanDerWaalsRadius() {
-        return vanDerWaalsRadius;
-    }
-
-    public void setVanDerWaalsRadius(int vanDerWaalsRadius) {
-        this.vanDerWaalsRadius = vanDerWaalsRadius;
-    }
-
-    public int getIonizationEnergy() {
-        return ionizationEnergy;
-    }
-
-    public void setIonizationEnergy(int ionizationEnergy) {
-        this.ionizationEnergy = ionizationEnergy;
-    }
-
-    public int getElectronAffinity() {
-        return electronAffinity;
-    }
-
-    public void setElectronAffinity(int electronAffinity) {
-        this.electronAffinity = electronAffinity;
-    }
-
-    public String getOxidationStates() {
-        return oxidationStates;
-    }
-
-    public void setOxidationStates(String oxidationStates) {
-        this.oxidationStates = oxidationStates;
-    }
-
-    public String getStandardState() {
-        return standardState;
-    }
-
-    public void setStandardState(String standardState) {
-        this.standardState = standardState;
-    }
-
-    public String getBondingType() {
-        return bondingType;
-    }
-
-    public void setBondingType(String bondingType) {
-        this.bondingType = bondingType;
-    }
-
-    public int getMeltingPoint() {
-        return meltingPoint;
-    }
-
-    public void setMeltingPoint(int meltingPoint) {
-        this.meltingPoint = meltingPoint;
-    }
-
-    public int getBoilingPoint() {
-        return boilingPoint;
-    }
-
-    public void setBoilingPoint(int boilingPoint) {
-        this.boilingPoint = boilingPoint;
-    }
-
-    public double getDensity() {
-        return density;
-    }
-
-    public void setDensity(double density) {
-        this.density = density;
-    }
-
-    public String getGroupBlock() {
-        return groupBlock;
-    }
-
-    public void setGroupBlock(String groupBlock) {
-        this.groupBlock = groupBlock;
-    }
-
-    public String getYearDiscovered() {
-        return yearDiscovered;
-    }
-
-    public void setYearDiscovered(String yearDiscovered) {
-        this.yearDiscovered = yearDiscovered;
-    }
-
-    public String getBlock() {
-        return block;
-    }
-
-    public void setBlock(String block) {
-        this.block = block;
-    }
-
-    public String getCpkHexColor() {
-        return cpkHexColor;
-    }
-
-    public void setCpkHexColor(String cpkHexColor) {
-        this.cpkHexColor = cpkHexColor;
-    }
-
-    public int getPeriod() {
-        return period;
-    }
-
-    public void setPeriod(int period) {
-        this.period = period;
-    }
-
-    public int getGroup() {
-        return group;
-    }
-
-    public void setGroup(int group) {
-        this.group = group;
-    }
-
-    public boolean isFavorited() {
-        return favorited;
-    }
-
-    public void setFavorited(boolean favorited) {
-        this.favorited = favorited;
-    }
 }

@@ -22,6 +22,6 @@ public class LoadElements extends AsyncTaskLoader<String> {
     @Nullable
     @Override
     public String loadInBackground() {
-        return NetworkUtils.searchElements(mQueryString);
+        return NetworkUtils.searchElementsMysql(mQueryString);
     }
 }
